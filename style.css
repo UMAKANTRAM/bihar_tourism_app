@@ -1,0 +1,287 @@
+/* Add your CSS styles here */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+.header-text {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-around;
+}
+
+.logo, .header-text, .search {
+    flex-grow: 1;
+    text-align: start;
+}
+
+.logo img {
+    max-width: 20%;
+    height: auto;
+}
+
+.header-text h1, .header-text h2, .header-text h3, .header-text h4 {
+    margin: 0;
+}
+
+.search input {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.section  {
+    position: relative; /* Required for positioning the video and content */
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensures the video stays behind the content */
+}
+
+
+#section1 .background-video source {
+    src: url('uv.mp4'); /* Video source for section 1 */
+}
+#section2 .background-video source {
+    src: url('yy.mp4'); /* Video source for section 1 */
+}
+.content {
+    padding: 100px;
+}
+#section1{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#section2{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.food-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.food-item {
+    background-color: #ffd700; /* Golden color for breakfast */
+    border-radius: 50px; /* Round the corners */
+    padding: 5px; /* Add padding for content */
+    margin-bottom: 10px; /* Add margin between sections */
+    height: 300px;
+    position: relative;
+}
+.Breakfast {
+    background-color: #00ffcc; /* Golden color for breakfast */
+    border-radius: 50px; /* Round the corners */
+    padding: 5px; /* Add padding for content */
+    margin-bottom: 10px; /* Add margin between sections */
+    height: 300px;
+    position: relative;
+}
+
+.Dinner {
+    background-color: #d4f093; /* Golden color for breakfast */
+    border-radius: 50px; /* Round the corners */
+    padding: 5px; /* Add padding for content */
+    margin-bottom: 10px; /* Add margin between sections */
+    height: 300px;
+    position: relative;
+}
+
+.food-item img {
+    width: 100%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+.Breakfast img {
+    width: 100%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+.Dinner img {
+    width: 100%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.food-item .content {
+    padding: 5px;
+}
+.Breakfast .content {
+    padding: 25px;
+}
+.Dinner .content {
+    padding: 15px;
+}
+
+.food-item {
+    transition: opacity 0.3s ease-in-out; /* Add transition effect for smooth hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to the image */
+}
+.Breakfast {
+    transition: opacity 0.3s ease-in-out; /* Add transition effect for smooth hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to the image */
+}
+.Dinner {
+    transition: opacity 0.3s ease-in-out; /* Add transition effect for smooth hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to the image */
+}
+
+.food-item:hover {
+    box-shadow: 0 8px 16px rgba(108, 199, 233, 0.2); /* Increase shadow on hover */
+    opacity: 0.8; /* Reduce opacity on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border: 2px solid #333; /* Add border on hover */
+    
+}
+.Dinner:hover {
+    box-shadow: 0 8px 16px rgba(108, 199, 233, 0.2); /* Increase shadow on hover */
+    opacity: 0.8; /* Reduce opacity on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border: 2px solid #333;
+}
+.Breakfast:hover {
+    box-shadow: 0 8px 16px rgba(108, 199, 233, 0.2); /* Increase shadow on hover */
+    opacity: 0.8; /* Reduce opacity on hover */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    border: 2px solid #333;
+}
+.centered-heading {
+    text-align: center;
+    margin-top: 50px; /* Adjust margin as needed */
+}
+/* Define different background colors for each food section */
+.food-section {
+    background-color: #bce7ef;
+    
+}
+
+#imageOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+#overlayImage {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+
+#lunchImageOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+#lunchOverlayImage {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+#DinnerImageOverlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+#DinnerOverlayImage {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+}
+
+.centered-heading {
+    text-align: center;
+    position: relative;
+    padding: 5px;
+}
+
+.rotate-svg {
+    animation: rotateAnimation 19s linear infinite; /* Adjust duration and timing function as needed */
+    width: 150px; /* Set the desired width */
+    height: fit-content; /* Maintain aspect ratio */
+    transform: rotate(45deg);
+    
+}
+
+@keyframes rotateAnimation {
+    from {
+        transform: rotate(0deg); /* Start rotation from 0 degrees */
+    }
+    to {
+        transform: rotate(360deg); /* Rotate to 360 degrees (one full rotation) */
+    }
+}
+
+.centered-heading::before {
+    content: "";
+    position: absolute;
+    top: 0; /* Adjust position as needed */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('left-pattern.svg'); /* Replace 'left-pattern.svg' with your SVG file */
+    background-size: 50%; /* Adjust size as needed */
+    z-index: -1;
+    opacity: 0; /* Adjust the opacity as needed */
+}
+.svg-container {
+    display: flex;
+    justify-content: space-around;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000000fb; /* Dark maroon color */
+    color: #94123d; /* White text color */
+    
+}
